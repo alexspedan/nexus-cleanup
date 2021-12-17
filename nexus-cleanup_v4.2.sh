@@ -20,7 +20,7 @@ do
         for t in $(cat sorted.tags) 
         do
             nexus-cli image info -name "$image" -tag "$t"
-            echo nexus-cli image delete -name "$image" -tag "$t"
+            nexus-cli image delete -name "$image" -tag "$t"
         done
     done
 done
